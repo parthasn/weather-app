@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Oxygen+Mono&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="styleSheet.css" />
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <title>Weather App</title>
+  </head>
+  <body>
+    <main>
+      <!-- search bar and city name -->
+      <section class="container">
+        <div class="nav">
+          <form id="search-form">
+            <input
+              type="text"
+              id="search-input"
+              aria-describedby="searchCity"
+              placeholder="Search city..."
+              class="search-form"
+              autocomplete="off"
+            />
+            <button type="submit">Search</button>
+          </form>
+          <p
+            id="searched-city"
+          >
+            
+        </p>
+        </div>
+        <span class="measurements">
+         <button onclick="handleToggle('celcius')">°C</button>
+         <button onclick="handleToggle('farhenheit')">°F</button>
+        </span>
+      </section>
+
+      <!-- temp and day info -->
+      <section class="current-weather">
+          <div class="containerDiv">
+          <h1 class="temp-title" id="current-temperature">0°</h1>
+          <div class="todays-info">
+              <p id="current-time">11:00</p>
+              <h2 id="current-day">Today</h2>
+              <p id="weather-type">Cloudy</p>
+          </div>
+          <div class="">
+              <ul>
+                <li>Humidity: <span id="humidity"></span></li>
+                <li>Wind: <span id="wind"></span></li>
+              </ul>
+          </div>
+          </div>
+        <hr />
+      </section>
+
+      <!--5 day forecast-->
+      <section class="container">
+        <div class="week-forecast">
+          
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
